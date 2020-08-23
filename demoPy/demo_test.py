@@ -56,6 +56,7 @@ def test_run2():
     driver.find_element_by_id("openwindow").click()
 
     handles = driver.window_handles
+
     size = len(handles)
     parent_handle = driver.current_window_handle
     for x in range(size):
