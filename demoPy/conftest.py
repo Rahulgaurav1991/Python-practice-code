@@ -14,7 +14,7 @@ def browserSetup(request):
         driver.get("https://google.com")
         driver.set_page_load_timeout(120)
         driver.delete_all_cookies()
-    if request.param == "Firefox":
+    elif request.param == "Firefox":
         driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         driver.maximize_window()
         driver.get("https://google.com")
